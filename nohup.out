@@ -1,0 +1,20 @@
+python: can't open file 'detect': [Errno 2] No such file or directory
+python: can't open file 'detect': [Errno 2] No such file or directory
+python: can't open file 'detect': [Errno 2] No such file or directory
+Traceback (most recent call last):
+  File "detect_v2.py", line 3, in <module>
+    from models import *  # set ONNX_EXPORT in models.py
+  File "/home/ly/workspace/waste_detect/models.py", line 2, in <module>
+    from utils.layers import *
+  File "/home/ly/workspace/waste_detect/utils/layers.py", line 1, in <module>
+    import torch.nn.functional as F
+ModuleNotFoundError: No module named 'torch'
+Namespace(agnostic_nms=False, augment=False, cfg='cfg/yolov3-tiny.cfg', classes=None, conf_thres=0.3, device='', fourcc='mp4v', half=False, img_size=512, iou_thres=0.6, names='data/waste.names', output='waste_detect/output', save_txt=False, source='waste_detect/input', view_img=False, weights='weights/best.pt')
+Model Summary: 37 layers, 8.67912e+06 parameters, 8.67912e+06 gradients
+ * Serving Flask app "detect_v2" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+172.21.23.189 - - [21/May/2021 14:13:48] "[37mPOST /detect HTTP/1.1[0m" 200 -
